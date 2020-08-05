@@ -10,7 +10,7 @@
         " ResizeMode="NoResize">
     <Grid>
         <Image HorizontalAlignment="Center" Height="288" VerticalAlignment="Top" Width="300" Margin="0,133.7,0,0" Source="Background.jpg"/>
-        <TextBox x:Name="MediaTextBox" HorizontalAlignment="Left" Height="23" Margin="29,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" TextChanged="MediaTextBox_TextChanged"/>
+        <TextBox x:Name="MediaTextBox" HorizontalAlignment="Left" Height="23" Margin="29,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" TextChanged="MediaTextBox_TextChanged" PreviewTextInput="MediaTextBox_CheckForErrors"/>
         <Label Content="Calcola il tuo voto di laurea!" HorizontalAlignment="Center" Margin="0,34,0,0" VerticalAlignment="Top" FontSize="30"/>
         <Label x:Name="MediaLabel" Content="Media Ponderata" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="CalculateMediaButton" Content="Calcola" HorizontalAlignment="Left" Margin="262,165,0,0" VerticalAlignment="Top" Width="75" Height="26" Click="CalculateMediaButton_Click"/>
