@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MahApps.Metro.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,11 +18,30 @@ namespace Laurea_Calculator
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
     {
+        public Laurea laurea;
+
         public MainWindow()
         {
             InitializeComponent();
+            laurea = new Laurea(0, 0);
+        }
+
+        private void CalculateMediaButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MediaTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (MediaTextBox.Text == string.Empty)
+            {
+                Score.Content = string.Empty;
+                return;
+            }
+            laurea.Media = float.Parse(MediaTextBox.Text);
+            Score.Content = laurea.CalculateVoto();
         }
     }
 }
